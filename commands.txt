@@ -1,12 +1,19 @@
 Send 50,000 packets, 512 bytes of payload at 4Mbps with unique dst port
 h1 sudo hping3 -2 --rand-source 10.0.0.2 -p ++0 -c 50000 -i u1000 -d 512
 
+Send 50,000 packets, 512 bytes of payload at 2Mbps with unique dst port
+h1 sudo hping3 -2 --rand-source 10.0.0.2 -p ++0 -c 50000 -i u4000 -d 512
+
+Send 50,000 packets, 512 bytes of payload at 1Mbps with unique dst port
+h1 sudo hping3 -2 --rand-source 10.0.0.2 -p ++0 -c 50000 -i u8000 -d 512
+
+
 
 Get the bandwidth
 iperf h1 h2
 
 Start environment with all xterm consoles
-sudo mn -E --custom ~/mininet/custom/base_topology.py --topo mytopo  --controller=remote
+sudo -E mn --custom ~/mininet/custom/base_topology.py --topo mytopo  --controller=remote
 
 Set up controller logs
 ./pox.py --verbose forwarding.l2_learning
