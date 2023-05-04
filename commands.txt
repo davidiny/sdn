@@ -1,11 +1,14 @@
 Send 50,000 packets, 512 bytes of payload at 4Mbps with unique dst port
 h1 sudo hping3 -2 --rand-source 10.0.0.2 -p ++0 -c 50000 -i u1000 -d 512
 
+Send 50,000 packets, 512 bytes of payload at 3Mbps with unique dst port
+h1 sudo hping3 -2 --rand-source 10.0.0.2 -p ++0 -c 50000 -i u1400 -d 512
+
 Send 50,000 packets, 512 bytes of payload at 2Mbps with unique dst port
-h1 sudo hping3 -2 --rand-source 10.0.0.2 -p ++0 -c 50000 -i u4000 -d 512
+h1 sudo hping3 -2 --rand-source 10.0.0.2 -p ++0 -c 50000 -i u2000 -d 512
 
 Send 50,000 packets, 512 bytes of payload at 1Mbps with unique dst port
-h1 sudo hping3 -2 --rand-source 10.0.0.2 -p ++0 -c 50000 -i u8000 -d 512
+h1 sudo hping3 -2 --rand-source 10.0.0.2 -p ++0 -c 50000 -i u4000 -d 512
 
 
 
