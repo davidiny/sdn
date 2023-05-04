@@ -10,6 +10,8 @@ h1 sudo hping3 -2 --rand-source 10.0.0.2 -p ++0 -c 50000 -i u2000 -d 512
 Send 50,000 packets, 512 bytes of payload at 1Mbps with unique dst port
 h1 sudo hping3 -2 --rand-source 10.0.0.2 -p ++0 -c 50000 -i u4000 -d 512
 
+Send 50,000 packets, 512 bytes of payload at 0.5Mbps with unique dst port
+h1 sudo hping3 -2 --rand-source 10.0.0.2 -p ++0 -c 50000 -i u8000 -d 512
 
 
 Get the bandwidth
